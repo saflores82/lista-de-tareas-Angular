@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { LocalStorageDataComponent } from './local-storage-data/local-storage-data.component';
 import { DeteleItemComponent } from './detele-item/detele-item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { DeteleItemComponent } from './detele-item/detele-item.component';
     LocalStorageDataComponent,
     DeteleItemComponent
   ],
-  imports: [
+   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()

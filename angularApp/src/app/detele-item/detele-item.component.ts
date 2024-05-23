@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+ 
 @Component({
-  selector: 'app-detele-item',
-  templateUrl: './detele-item.component.html',
-  styleUrl: './detele-item.component.css'
+  selector: 'app-delete-item',
+  templateUrl: './delete-item.component.html',
+  styleUrls: ['./delete-item.component.css']
 })
-export class DeteleItemComponent {
-
+export class DeleteItemComponent {
+  @Input() item: any;
+  @Output() delete = new EventEmitter<any>();
+ 
+  deleteItem(): void {
+    this.delete.emit(this.item);
+  }
 }
